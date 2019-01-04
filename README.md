@@ -14,7 +14,7 @@
 From the command prompt go to your app's root folder and execute:
 
 ```
-tns plugin add nativescript-bluetooth
+tns plugin add nativescript-akylas-bluetooth
 ```
 
 And do yourself a favor by adding TypeScript support to your nativeScript app:
@@ -144,7 +144,7 @@ This function will receive an object representing the peripheral which contains 
 
 ```js
 bluetooth.startScanning({
-  serviceUUIDs: [],
+  filters: [{serviceUUID:'180d'}],
   seconds: 4,
   onDiscovered: function (peripheral) {
   	console.log("Periperhal found with UUID: " + peripheral.UUID);
